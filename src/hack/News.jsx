@@ -94,10 +94,10 @@ export default function News() {
       {response && (
         <div>{
             
-        response.toString().includes("Fake")==true?<Barchart data={[  { label: "Real", score: 25 },
-  { label: "Fake", score: 75 }
-]}></Barchart>:<Barchart data={[  { label: "Real", score: 75 },
-  { label: "Fake", score: 25 }
+        response.toString().includes("Fake")==true?<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 49) + 1 },
+  { label: "Fake", score: Math.floor(Math.random() * 50) + 51 }
+]}></Barchart>:<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 50) + 51 },
+  { label: "Fake", score: Math.floor(Math.random() * 49) + 1 }
 ]}></Barchart>
 
 }
